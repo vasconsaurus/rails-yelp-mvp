@@ -10,6 +10,7 @@
   restaurant = Restaurant.new
   restaurant.name = Faker::Restaurant.name
   restaurant.address = Faker::Address.street_address
+  restaurant.phone_number = Faker::PhoneNumber.cell_phone
   restaurant.category = %w[chinese italian japanese french belgian].sample
   restaurant.save
 end
