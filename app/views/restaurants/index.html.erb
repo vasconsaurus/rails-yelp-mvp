@@ -4,9 +4,10 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Category</th>
       <th>Address</th>
       <th>Phone Number</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -14,6 +15,7 @@
     <% @restaurants.each do |restaurant| %>
       <tr>
         <td><%= restaurant.name %></td>
+        <td><%= restaurant.category %></td>
         <td><%= restaurant.address %></td>
         <td><%= restaurant.phone_number %></td>
         <td><%= link_to 'Show', restaurant_path(restaurant), class: 'btn btn-success' %></td>
@@ -21,3 +23,5 @@
     <% end %>
   </tbody>
 </table>
+
+<%= link_to 'New Restaurant', new_restaurant_path, class: 'btn btn-primary' %>
